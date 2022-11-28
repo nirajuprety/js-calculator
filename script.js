@@ -14,7 +14,7 @@ class Calculator {
         this.currentOperand = this.currentOperand.toString().slice(0, -1)
     }
     appendNumber(number) {
-        if (number == '.' && this.currentOperand.includes('.')) return
+        if (number === '.' && this.currentOperand.includes('.')) return
         this.currentOperand = this.currentOperand.toString() + number.toString()
 
     }
@@ -91,11 +91,11 @@ class Calculator {
 
 const numberButtons = document.querySelectorAll('[data-number]')
 const operationButtons = document.querySelectorAll('[data-operation]')
-const equalsButton = document.querySelectorAll('[data-equals]')
-const deleteButton = document.querySelectorAll('[data-delete]')
-const allClearButton = document.querySelectorAll('[data-all-clear]')
-const previousOperandTextElement = document.querySelectorAll('[data-previous-operrand]')
-const currentOperandTextElement = document.querySelectorAll('[data-current-operrand]')
+const equalsButton = document.querySelector('[data-equals]')
+const deleteButton = document.querySelector('[data-delete]')
+const allClearButton = document.querySelector('[data-all-clear]')
+const previousOperandTextElement = document.querySelector('[data-previous-operand]')
+const currentOperandTextElement = document.querySelector('[data-current-operand]')
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
